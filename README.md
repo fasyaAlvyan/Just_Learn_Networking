@@ -1,1 +1,1 @@
-This repository is created for basic networking
+This repository is created for basic networking project
