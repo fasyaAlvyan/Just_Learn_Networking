@@ -1,13 +1,18 @@
-This folder is created to learn **basic network topologies** and how 4 main network structures work.  
-
-## Fault Tolerance
-- Simple-Redundant-Static-Routing.pkt  
-
-## QoS (Quality of Service)
-- (coming soon🤡) Projects to demonstrate bandwidth management and prioritization  
-
-## Scalability
-- (coming soon💀) Examples of expandable network topologies  
-
-## Security
-- (coming soon👾) Configurations focused on secure design  
+![Topology](https://github.com/fasyaAlvyan/Just_Learn_Networking/blob/main/redundant-static-topology/cisco-redudant-static/Topology.png)
+## Components I used(SIMPLE TOPOLOGY Fault-Tolerance 1):
+This simple topology demonstrates basic **redundant links** between routers using serial connections.
+- **4 Router**
+- **2 PC**
+- **4 Serial DCE Cables**
+## Components I used(SIMPLE TOPOLOGY Fault-Tolerance 2):
+This topology demonstrates a **more complex fault-tolerant network**, featuring multiple subnets, DHCP servers, DNS, and wireless connectivity.
+- **4 Router**
+- **4 Switch**
+- **6 Serial DCE Cables**
+- **3 DHCP-Server**
+- **1 DNS-Server**
+- **1 HTTP/HTTPS-Server**
+- **1 Access Point**
+- **4 PC**
+- **2 Laptop**
+- **1 Smarthphone**
