@@ -13,4 +13,5 @@
 - **4 Router**
 - **2 PC**
 - **4 UTP Straight Cables**
+ 
 This simple topology is for a basic **redundant link** between routers using a Straight UTP cable using a Mikrotik Router.
