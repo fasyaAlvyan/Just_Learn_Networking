@@ -9,3 +9,8 @@
 - [Router 2-Config](https://github.com/fasyaAlvyan/Just_Learn_Networking/blob/main/redundant-static-topology/mikrotik-redudant-static/Router2-config.rsc)
 - [Router 3-Config](https://github.com/fasyaAlvyan/Just_Learn_Networking/blob/main/redundant-static-topology/mikrotik-redudant-static/Router3-config.rsc)
 - [Router 4-Config](https://github.com/fasyaAlvyan/Just_Learn_Networking/blob/main/redundant-static-topology/mikrotik-redudant-static/Router4-config.rsc)
+## Components I used:
+This simple topology is for a basic **redundant link** between routers using a Straight UTP cable using a Mikrotik Router.
+- **4 Router**
+- **2 PC**
+- **4 UTP Straight Cables**
