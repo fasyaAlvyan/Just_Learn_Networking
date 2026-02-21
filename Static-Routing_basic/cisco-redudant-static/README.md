@@ -14,7 +14,7 @@ Dalam topologi ini, saya menerapkan:
 
 ## Cara Menjalankan
 1. Download file `.pkt` di bawah ini.
-2. Buka menggunakan aplikasi **Cisco Packet Tracer** (versi terbaru disarankan).
+2. Buka menggunakan aplikasi **Cisco Packet Tracer**.
 3. Lakukan pengujian dengan melakukan `ping` antar PC atau `traceroute` untuk melihat perubahan jalur saat kabel utama diputus.
 
 ## 📂 File Project
@@ -24,4 +24,4 @@ Dalam topologi ini, saya menerapkan:
 - Saya tidak mengimplementasikan Administrative distance(AD) pada semua router didalam topologi, sehingga paket data akan berputar terlebih dahulu kebeberapa router yang akan meningkatkan hop count, ini menyebabkan ketidak efisienan network dan meningkatkan latency karena paket data yang berputar terlebih dahulu kebeberapa router.
 
 ## Rencana perbaikan
-- Saya berencana untuk menggunakan metode Floating static agar hanya 1 link yang dipakai untuk pengiriman paket data untuk efisiensi dan berencana untuk menggunakan protokol routing dinamis agar lebih Redundant dan efisien.
+- Saya berencana untuk menggunakan metode Floating static agar hanya 1 link yang dipakai, untuk pengiriman paket data yang lebih efisien, dan berencana untuk menggunakan protokol routing dinamis agar lebih *Redundant* dan *scalable*.
