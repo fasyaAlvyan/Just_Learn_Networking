@@ -1,12 +1,12 @@
 # Simple Redundant Static Routing (Cisco Packet Tracer) Version
 
 ## 📌 Deskripsi Proyek
-Proyek ini merupakan simulasi jaringan LAN menggunakan **Static Routing** dengan implementasi konsep **Floating Static Route**. Tujuannya adalah untuk menciptakan jaringan yang memiliki *Redundancy* dan *High Availability*.
+Proyek ini merupakan simulasi jaringan LAN menggunakan **Static Routing** Tujuannya adalah untuk menciptakan jaringan yang memiliki *Redundancy* dan *High Availability*.
 
-## 🛠️ Konsep Jaringan
+## 🛠️ Konsep Jaringa
 Dalam topologi ini, saya menerapkan:
 * **Primary Path:** Jalur utama pengiriman data.
-* **Backup Path (Floating Static):** Jalur cadangan yang akan aktif secara otomatis jika jalur utama mengalami kegagalan (Down).
+* **Backup Path:** Jalur cadangan yang akan aktif secara otomatis jika jalur utama mengalami kegagalan (Down).
 * **Administrative Distance (AD):** Saya mengatur nilai AD pada jalur cadangan lebih tinggi daripada jalur utama agar mekanisme *failover* dapat berjalan.
 
 ## 🗺️ Topologi Jaringan
@@ -21,4 +21,7 @@ Dalam topologi ini, saya menerapkan:
 * [Download File Topology (.pkt)](https://github.com/fasyaAlvyan/Just_Learn_Networking/raw/refs/heads/main/Static-Routing_basic/cisco-redudant-static/Simple-Redundant-Static-Routing.pkt)
 
 ## Kekurangan / Kelemahan
-- Saya tidak mengimplementasikan Administrative distance(AD) pada semua router didalam topologi, sehingga paket data akan berputar terlebih dahulu kebeberapa router yang akan meningkatkan hop count, ini menyebabkan ketidak efisienan network dan meningkatkan latency karena paket data yang berputar terlebih dahulu kebeberapa router
+- Saya tidak mengimplementasikan Administrative distance(AD) pada semua router didalam topologi, sehingga paket data akan berputar terlebih dahulu kebeberapa router yang akan meningkatkan hop count, ini menyebabkan ketidak efisienan network dan meningkatkan latency karena paket data yang berputar terlebih dahulu kebeberapa router.
+
+## Rencana perbaikan
+- Saya berencana untuk menggunakan metode Floating static agar hanya 1 link yang dipakai untuk pengiriman paket data untuk efisiensi dan berencana untuk menggunakan protokol routing dinamis agar lebih Redundant dan efisien.
