@@ -1,4 +1,4 @@
-# Simple Redundant Static Routing (Cisco Packet Tracer)
+# Simple Redundant Static Routing (Cisco Packet Tracer) Version
 
 ## 📌 Deskripsi Proyek
 Proyek ini merupakan simulasi jaringan LAN menggunakan **Static Routing** dengan implementasi konsep **Floating Static Route**. Tujuannya adalah untuk menciptakan jaringan yang memiliki *Redundancy* dan *High Availability*.
