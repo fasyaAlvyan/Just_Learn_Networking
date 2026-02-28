@@ -27,7 +27,6 @@ Dalam topologi ini, saya menerapkan:
 - Edge Router     : 10.1.99.1
 - Switch 1        : 10.1.99.2
 - Switch 2        : 10.1.99.3
-- Ruijie-SW 3     : 10.1.99.4 (rencana)
 
 ## Cara Menjalankan
 1. Import konfigurasi MikroTik melalui Winbox atau `/import`
@@ -37,19 +36,27 @@ Dalam topologi ini, saya menerapkan:
 5. Test konektivitas antar Client/Host
 
 ## 📂 File Konfigurasi
-- Edge-Router : [Config](https://github.com/fasyaAlvyan/Just_Learn_Networking/blob/main/VLAN_basic/VLAN_3-Switch-RoS/EDGE-ROUTER_config.rsc)
-- Switch 1 : [Config](https://github.com/fasyaAlvyan/Just_Learn_Networking/blob/main/VLAN_basic/VLAN_3-Switch-RoS/Switch-1_config.rsc)
-- Switch 2 : [Config](https://github.com/fasyaAlvyan/Just_Learn_Networking/blob/main/VLAN_basic/VLAN_3-Switch-RoS/Switch-2_config.rsc)
-- Ruijie-SW 3 : [Config](https://github.com/fasyaAlvyan/Just_Learn_Networking/blob/main/VLAN_basic/VLAN_3-Switch-RoS/Ruijie-SW%203_config.txt)
+- Edge-Router : [Config]()
+- Switch 1 : [Config](VLAN_basic/VLAN_3-Switch-RoS/Mikrotik/EDGE-ROUTER_config.rsc)
+- Switch 2 : [Config](VLAN_basic/VLAN_3-Switch-RoS/Mikrotik/Switch-1_config.rsc)
+- Ruijie-SW 3 : [Config](VLAN_basic/VLAN_3-Switch-RoS/Mikrotik/Switch-2_config.rsc)
 
 ## Kekurangan / Kelemahan
 - Saya tidak mengimplementasikan STP yang berfungsi untuk mencegah broadcast storm atau loop frame yang dikirim secara Broadcast oleh switch yang bisa menyebabkan kinerja jaringan menurun atau menyebabkan device Hang, dan saya tidak melakukan tagging pada Pure-Native path yang bisa menjadi celah keamanan untuk jaringan, yang menyebabkan serangan seperti VLAN Hopping bisa terjadi.
 
 ## ✅ Verifikasi & Pengujian
-- **Ping Test:** VPC3 (VLAN 10) dapat melakukan ping ke VPC5 (VLAN 10) dan Gateway (192.168.10.1).
-- **Inter-VLAN Routing:** VPC3 (VLAN 10) dapat berkomunikasi dengan VPC4 (VLAN 20) melalui Edge-Router.
-- **Management Access:** Switch 1, Switch 2, dan Ruijie dapat di-remote melalui IP 10.1.99.x dari jaringan yang diizinkan.
-- **RoMON:** Semua perangkat MikroTik terlihat dalam tetangga RoMON untuk manajemen Layer 2.
+
+- **Management VLAN 99 reachable** dari Edge Router (ping ke Switch 1 & Switch 2 sukses, 0% loss):
+  <image-card alt="Management Ping Test" src="Screenshots/management-ping-from-edge.png" ></image-card>
+
+- **DHCP leases** di Edge Router (semua client VLAN 10 & 20 bound dengan IP benar):
+  <image-card alt="DHCP Leases" src="Screenshots/dhcp-leases-print_edge.png" ></image-card>
+
+- **RoMON neighbors** terdeteksi → semua MikroTik switch terhubung untuk manajemen Layer-2:
+  <image-card alt="RoMON Neighbors in Winbox" src="Screenshots/romon-neighbors-winbox.png" ></image-card>
+
+- **Client-side test** di VPCS (DHCP berhasil, intra-VLAN & inter-VLAN ping OK):
+  <image-card alt="VPCS DHCP & Ping Test" src="Screenshots/vpcs3-dhcp-ping-test.png" ></image-card>
 
 ## Rencana perbaikan
 - Saya berencana untuk mengimplementasikan protokol seperti STP,VTP,dan protokol lainnya agar Kinerja jaringan meningkat, dan berencana untuk mengimplementasikan Inter-Vlan Routing pada Switch layer 3 agar paket yang tujuannya ke jaringan internal bisa langsung di forward oleh Switch layer 3 dan Router bisa fokus pada paket yang tujuannya ke luar jaringan.
