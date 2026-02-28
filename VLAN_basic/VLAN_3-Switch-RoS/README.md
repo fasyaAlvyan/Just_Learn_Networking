@@ -36,10 +36,10 @@ Dalam topologi ini, saya menerapkan:
 5. Test konektivitas antar Client/Host
 
 ## 📂 File Konfigurasi
-Edge-Router : [Config](https://github.com/fasyaAlvyan/Just_Learn_Networking/blob/main/VLAN_basic/VLAN_3-Switch-RoS/EDGE-ROUTER_config.rsc)
-Switch 1 : [Config](https://github.com/fasyaAlvyan/Just_Learn_Networking/blob/main/VLAN_basic/VLAN_3-Switch-RoS/Switch-1_config.rsc)
-Switch 2 : [Config](https://github.com/fasyaAlvyan/Just_Learn_Networking/blob/main/VLAN_basic/VLAN_3-Switch-RoS/Switch-2_config.rsc)
-Ruijie-SW 3 : [Config](https://github.com/fasyaAlvyan/Just_Learn_Networking/blob/main/VLAN_basic/VLAN_3-Switch-RoS/Ruijie-SW%203_config.txt)
+- Edge-Router : [Config](https://github.com/fasyaAlvyan/Just_Learn_Networking/blob/main/VLAN_basic/VLAN_3-Switch-RoS/EDGE-ROUTER_config.rsc)
+- Switch 1 : [Config](https://github.com/fasyaAlvyan/Just_Learn_Networking/blob/main/VLAN_basic/VLAN_3-Switch-RoS/Switch-1_config.rsc)
+- Switch 2 : [Config](https://github.com/fasyaAlvyan/Just_Learn_Networking/blob/main/VLAN_basic/VLAN_3-Switch-RoS/Switch-2_config.rsc)
+- Ruijie-SW 3 : [Config](https://github.com/fasyaAlvyan/Just_Learn_Networking/blob/main/VLAN_basic/VLAN_3-Switch-RoS/Ruijie-SW%203_config.txt)
 
 ## Kekurangan / Kelemahan
 - Saya tidak mengimplementasikan STP yang berfungsi untuk mencegah broadcast storm atau loop frame yang dikirim secara Broadcast oleh switch yang bisa menyebabkan kinerja jaringan menurun atau menyebabkan device Hang, dan saya tidak melakukan tagging pada Pure-Native path yang bisa menjadi celah keamanan untuk jaringan, yang menyebabkan serangan seperti VLAN Hopping bisa terjadi.
