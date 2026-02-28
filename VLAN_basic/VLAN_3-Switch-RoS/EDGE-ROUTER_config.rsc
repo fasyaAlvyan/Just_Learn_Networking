@@ -1,3 +1,5 @@
+/system identity
+set name=EDGE-ROUTER
 /interface vlan
 add interface=ether2 name=Native-Management vlan-id=99
 add interface=ether2 name=Vlan20 vlan-id=20
