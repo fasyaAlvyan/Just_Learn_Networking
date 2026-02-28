@@ -47,16 +47,16 @@ Dalam topologi ini, saya menerapkan:
 ## ✅ Verifikasi & Pengujian
 
 - **Management VLAN 99 reachable** dari Edge Router (ping ke Switch 1 & Switch 2 sukses, 0% loss):
-  [Ping Management](https://github.com/fasyaAlvyan/Just_Learn_Networking/blob/main/VLAN_basic/VLAN_3-Switch-RoS/Screenshots/management-ping-from-edge.png)
+  ![Ping Management](https://github.com/fasyaAlvyan/Just_Learn_Networking/blob/main/VLAN_basic/VLAN_3-Switch-RoS/Screenshots/management-ping-from-edge.png)
 
 - **DHCP leases** di Edge Router (semua client VLAN 10 & 20 bound dengan IP benar):
-  [DHCP Leases list](https://github.com/fasyaAlvyan/Just_Learn_Networking/blob/main/VLAN_basic/VLAN_3-Switch-RoS/Screenshots/dhcp-leases-print_edge.png)
+  ![DHCP Leases list](https://github.com/fasyaAlvyan/Just_Learn_Networking/blob/main/VLAN_basic/VLAN_3-Switch-RoS/Screenshots/dhcp-leases-print_edge.png)
 
 - **RoMON neighbors** terdeteksi → semua MikroTik switch terhubung untuk manajemen Layer-2:
-  [DHCP Leases list](https://github.com/fasyaAlvyan/Just_Learn_Networking/blob/main/VLAN_basic/VLAN_3-Switch-RoS/Screenshots/romon-neighbors-winbox.png)
+  ![DHCP Leases list](https://github.com/fasyaAlvyan/Just_Learn_Networking/blob/main/VLAN_basic/VLAN_3-Switch-RoS/Screenshots/romon-neighbors-winbox.png)
 
 - **Client-side test** di VPCS (DHCP berhasil, intra-VLAN & inter-VLAN ping OK):
-  [Client test](https://github.com/fasyaAlvyan/Just_Learn_Networking/blob/main/VLAN_basic/VLAN_3-Switch-RoS/Screenshots/vpcs3-dhcp-ping-test.png)
+  ![Client test](https://github.com/fasyaAlvyan/Just_Learn_Networking/blob/main/VLAN_basic/VLAN_3-Switch-RoS/Screenshots/vpcs3-dhcp-ping-test.png)
 
 ## Rencana perbaikan
 - Saya berencana untuk mengimplementasikan protokol seperti STP,VTP,dan protokol lainnya agar Kinerja jaringan meningkat, dan berencana untuk mengimplementasikan Inter-Vlan Routing pada Switch layer 3 agar paket yang tujuannya ke jaringan internal bisa langsung di forward oleh Switch layer 3 dan Router bisa fokus pada paket yang tujuannya ke luar jaringan.
