@@ -3,6 +3,9 @@
 ## 📌 Deskripsi Proyek
 Proyek ini merupakan simulasi jaringan **Router-on-Stick** menggunakan MikroTik dan Ruijie Switch. Tujuannya adalah memecah satu broadcast domain menjadi beberapa VLAN (10, 20, dan 99 Management) untuk meningkatkan keamanan, efisiensi, dan segmentasi jaringan.
 
+## 🗺️ Topologi Jaringan
+![Network Topology](https://github.com/fasyaAlvyan/Just_Learn_Networking/blob/main/VLAN_basic/VLAN_3-Switch-RoS/Topology.png)
+
 ## 🛠️ Konsep Jaringan
 Dalam topologi ini, saya menerapkan:
 * **Router on Stick** Jalur utama transmisi data pada switch 1 (Distributed Switch) dengan menggunakan 1 media transmisi saja untuk bertukar dan meneruskan data antar switch atau router.
@@ -11,8 +14,6 @@ Dalam topologi ini, saya menerapkan:
 * **Pure-Native path:** Jalur khusus transmisi data untuk device Legacy yang tidak support VLAN dengan mengirim data tanpa tagging VLAN pada frame agar device bisa membaca frame yang diterima. (Switch 2 ↔ Ruijie)
 * **Native-With-Tagging:** Jalur khusus transmisi data yang melakukan tagging pada Native untuk keamanan,management dan mencegah serangan VLAN Hopping. (Switch 1 ↔ Switch 2)
 
-## 🗺️ Topologi Jaringan
-![Network Topology](https://github.com/fasyaAlvyan/Just_Learn_Networking/blob/main/VLAN_basic/VLAN_3-Switch-RoS/Topology.png)
 
 ## 🗂️ IP Addressing & VLAN Scheme
 
