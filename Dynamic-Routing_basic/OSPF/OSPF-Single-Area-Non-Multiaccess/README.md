@@ -3,7 +3,8 @@
 ## 📌 Deskripsi Proyek
 Proyek ini merupakan simulasi jaringan Routing dinamis menggunakan protocol **OSPF**, dengan model jaringan **Single Area Point-to-Point non Multiaccess**. Tujuannya untuk membuat jaringan yang **redundant**, **fleksibel**, **fault tolerance**, dan **manageable** menggunakan teknik **manipulation cost** dengan menentukan cost pada output interface secara manual menggunakan perhitungan
 
-![formula](https://latex.codecogs.com/svg.image?Cost=\frac{Reference\ Bandwidth}{Interface\ Bandwidth})
+![formula](https://latex.codecogs.com/svg.image?Cost=\frac{Reference\;Bandwidth}{Interface\;Bandwidth})
+
 untuk menentukan Primary path(link) dan Backup link
 
 ## 🗺️ Topologi Jaringan
