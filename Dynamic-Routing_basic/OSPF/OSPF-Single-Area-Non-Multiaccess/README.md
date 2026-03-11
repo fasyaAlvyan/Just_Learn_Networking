@@ -2,13 +2,12 @@
 
 ## 📌 Deskripsi Proyek
 Proyek ini merupakan simulasi jaringan Routing dinamis menggunakan protocol **OSPF**, dengan model jaringan **Single Area Point-to-Point non Multiaccess**. Tujuannya untuk membuat jaringan yang **redundant**, **fleksibel**, **fault tolerance**, dan **manageable** menggunakan teknik **manipulation cost** dengan menentukan cost pada output interface secara manual menggunakan perhitungan
-$$
-Cost = \frac{Reference \ Bandwidth}{Interface \ Bandwidth}
-$$
+
+![formula](https://latex.codecogs.com/svg.image?Cost=\frac{Reference\ Bandwidth}{Interface\ Bandwidth})
 untuk menentukan Primary path(link) dan Backup link
 
 ## 🗺️ Topologi Jaringan
-![Network Topology](https://github.com/fasyaAlvyan/Just_Learn_Networking/blob/main/VLAN_basic/VLAN_3-Switch-RoS/Screenshots/Topology.png)
+![Network Topology](https://github.com/fasyaAlvyan/Just_Learn_Networking/blob/main/Dynamic-Routing_basic/OSPF/OSPF-Single-Area-Non-Multiaccess/Screenshots/Topology.png)
 
 ## 🛠️ Konsep Jaringan
 Dalam topologi ini, saya menerapkan:
@@ -31,10 +30,10 @@ Dalam topologi ini, saya menerapkan:
 1. Import konfigurasi MikroTik melalui Winbox atau `/import`
 
 ## 📂 File Konfigurasi
-- Edge-Router : [Config file](https://github.com/fasyaAlvyan/Just_Learn_Networking/blob/main/VLAN_basic/VLAN_3-Switch-RoS/Mikrotik/EDGE-ROUTER_config.rsc)
-- Switch 1 : [Config file](https://github.com/fasyaAlvyan/Just_Learn_Networking/blob/main/VLAN_basic/VLAN_3-Switch-RoS/Mikrotik/Switch-1_config.rsc)
-- Switch 2 : [Config file](https://github.com/fasyaAlvyan/Just_Learn_Networking/blob/main/VLAN_basic/VLAN_3-Switch-RoS/Mikrotik/Switch-2_config.rsc)
-- Ruijie-SW 3 : [Config file](https://github.com/fasyaAlvyan/Just_Learn_Networking/blob/main/VLAN_basic/VLAN_3-Switch-RoS/Ruijie/Ruijie-SW%203_config.txt)
+- Router 1 : [Config file](https://github.com/fasyaAlvyan/Just_Learn_Networking/blob/main/Dynamic-Routing_basic/OSPF/OSPF-Single-Area-Non-Multiaccess/Config/Router1-OSPF_config.rsc)
+- Router 2 : [Config file](https://github.com/fasyaAlvyan/Just_Learn_Networking/blob/main/Dynamic-Routing_basic/OSPF/OSPF-Single-Area-Non-Multiaccess/Config/Router2-OSPF_config.rsc)
+- Router 3 : [Config file](https://github.com/fasyaAlvyan/Just_Learn_Networking/blob/main/Dynamic-Routing_basic/OSPF/OSPF-Single-Area-Non-Multiaccess/Config/Router3-OSPF_config.rsc)
+- Router 4 : [Config file](https://github.com/fasyaAlvyan/Just_Learn_Networking/blob/main/Dynamic-Routing_basic/OSPF/OSPF-Single-Area-Non-Multiaccess/Config/Router4-OSPF_config.rsc)
 
 ## Kekurangan dan kelebihan
 - Dalam simulasi ini saya hanya mengimplementasikan 1 area saja yaitu "Backbone" dengan tipe network PtP yang dimana memiliki kekurangan yaitu tidak terlalu fleksibel karena harus mengganti mode tipe network menjadi PtP,PtmP,Broadcast, dan yang lainnya . dan juga jika ingin menambah router lagi harus menggunakan 1 interface produktif tambahan yang dimana terlalu boros, yang sebenarnya bisa dioptimalkan lagi dengan menggunakan 1 interface saja dan memakai switch sebagai media penghubung antar router dalam 1 area, dan topologi ini terlalu banyak network dan bisa dibuat menjadi 1 network saja untuk 1 area. kelebihan dari topologi ini adalah link yang Redundant karena router terhubung ke 2 router lainnya.
