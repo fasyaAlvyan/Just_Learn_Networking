@@ -1,7 +1,7 @@
 # OSPF Single Area non Multiaccess Lab (PNETLab)
 
 ## 📌 Deskripsi Proyek
-Proyek ini merupakan simulasi jaringan Routing dinamis menggunakan protocol **OSPF**, dengan model jaringan **Single Area Point-to-Point non Multiaccess**. Tujuannya untuk membuat jaringan yang **redundant**, **fleksibel**, **fault tolerance**, dan **manageable** menggunakan teknik **manipulation cost** dengan menentukan cost pada output interface secara manual menggunakan perhitungan
+Proyek ini merupakan simulasi jaringan Routing dinamis menggunakan protocol **OSPF**, dengan model jaringan **Single Area Point-to-Point non Multiaccess**. Tujuannya membuat jaringan yang **redundant** untuk meningkatkan **fault tolerance** , menggunakan teknik **manipulation cost** dengan menentukan cost pada output interface secara manual menggunakan perhitungan
 
 ![formula](https://latex.codecogs.com/svg.image?Cost=\frac{Reference\;Bandwidth}{Interface\;Bandwidth})
 
@@ -10,14 +10,14 @@ untuk menentukan Primary path(link) dan Backup link
 ## 🗺️ Topologi Jaringan
 ![Network Topology](https://github.com/fasyaAlvyan/Just_Learn_Networking/blob/main/Dynamic-Routing_basic/OSPF/OSPF-Single-Area-Non-Multiaccess/Screenshots/Topology.png)
 
-## 🛠️ Konsep Jaringan
+## Konsep Jaringan
 Dalam topologi ini, saya menerapkan:
 * **OSPF(Open Shortest Path First)** protokol Link-state utama yang dipakai dalam simulasi ini, untuk membuat rute data secara otomatis dari kalkulasi LSDB menggunakan algoritma SPF, yang hasilnya dicatat di tabel routing.
 * **DHCP(Dynamic Host Configuration Protocol)** protokol yang dipakai untuk pengalamatan IP secara otomatis menggunakan proses DORA(Discover, Offer, Request, Acknowledge) kepada client / host yang terhubung.
 * **Passive Interface** dipakai agar paket dari protokol OSPF tidak mengirim ke interface yang dikonfigurasi sebagai Passive karena tidak ada neighbor di interface tersebut <eth 3 all router are passive>.
 * **Default Route Originate** digunakan pada Router 2 yang berperan sebagai ASBR, untuk mengiklankan default route (0.0.0.0/0) ke router lain sehingga mereka dapat mengakses jaringan luar melalui Router 2 sebagai gateway.
 
-## 📊 IP Addressing Scheme
+## IP Addressing Scheme
 
 | Router | Loopback0 | eth1              | eth2              |LAN (ether3 Passive)|
 |--------|-----------|-------------------|-------------------|--------------------|
@@ -36,8 +36,15 @@ Dalam topologi ini, saya menerapkan:
 - Router 3 : [Config file](https://github.com/fasyaAlvyan/Just_Learn_Networking/blob/main/Dynamic-Routing_basic/OSPF/OSPF-Single-Area-Non-Multiaccess/Config/Router3-OSPF_config.rsc)
 - Router 4 : [Config file](https://github.com/fasyaAlvyan/Just_Learn_Networking/blob/main/Dynamic-Routing_basic/OSPF/OSPF-Single-Area-Non-Multiaccess/Config/Router4-OSPF_config.rsc)
 
-## Kekurangan dan kelebihan
-- Dalam simulasi ini saya hanya mengimplementasikan 1 area saja yaitu "Backbone" dengan tipe network PtP yang dimana memiliki kekurangan yaitu tidak terlalu fleksibel karena harus mengganti mode tipe network menjadi PtP,PtmP,Broadcast, dan yang lainnya . dan juga jika ingin menambah router lagi harus menggunakan 1 interface produktif tambahan yang dimana terlalu boros, yang sebenarnya bisa dioptimalkan lagi dengan menggunakan 1 interface saja dan memakai switch sebagai media penghubung antar router dalam 1 area, dan topologi ini terlalu banyak network dan bisa dibuat menjadi 1 network saja untuk 1 area. kelebihan dari topologi ini adalah link yang Redundant karena router terhubung ke 2 router lainnya.
+## Kekurangan dan Kelebihan
+# Kekurangan
+- Hanya 1 area (Backbone) dengan tipe Point-to-Point → kurang fleksibel jika topologi berubah.
+- Menggunakan terlalu banyak interface/link PtP (bisa disederhanakan).
+# Kelebihan
+- Link redundan (setiap router terhubung ke 2 router lain).
+- Fault tolerance tinggi berkat cost manipulation.
 
-## Rencana perbaikan
-- Saya berencana untuk membuat jaringan yang lebih efisien dengan menggunakan metode Multiaccess yaitu menggunakan switch sebagai media penghubung agar tidak terlalu banyak interfac produktif yang digunakan dan agar lebih scalelable
+## Rencana Perbaikan
+- Mengubah topologi menjadi Multiaccess dengan menambahkan switch.
+- Mengurangi jumlah interface yang aktif.
+- Membuat lab yang lebih scalable dan mudah dikembangkan ke multi-area.
