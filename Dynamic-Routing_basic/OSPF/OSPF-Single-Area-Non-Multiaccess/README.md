@@ -1,14 +1,14 @@
-# OSPF Single Area non Multiaccess Lab (PNETLab)
+# OSPF Single Area Point-To-Point (PNETLab)
 
 ## 📌 Deskripsi Proyek
-Proyek ini merupakan simulasi jaringan Routing dinamis menggunakan protocol **OSPF**, dengan model jaringan **Single Area Point-to-Point non Multiaccess**. Tujuannya membuat jaringan yang **redundant** untuk meningkatkan **fault tolerance** , menggunakan teknik **manipulation cost** dengan menentukan cost pada output interface secara manual menggunakan perhitungan
+Proyek ini merupakan simulasi jaringan Routing dinamis menggunakan protocol **OSPF**, dengan model jaringan **Single Area Point-to-Point**. Tujuannya membuat jaringan yang **redundant** untuk meningkatkan **fault tolerance** , menggunakan teknik **manipulation cost** dengan menentukan cost pada output interface secara manual menggunakan perhitungan
 
 ![formula](https://latex.codecogs.com/svg.image?Cost=\frac{Reference\;Bandwidth}{Interface\;Bandwidth})
 
 untuk menentukan Primary path(link) dan Backup link
 
 ## 🗺️ Topologi Jaringan
-![Network Topology](https://github.com/fasyaAlvyan/Just_Learn_Networking/blob/main/Dynamic-Routing_basic/OSPF/OSPF-Single-Area-Non-Multiaccess/Screenshots/Topology.png)
+![Network Topology](https://github.com/fasyaAlvyan/Just_Learn_Networking/blob/main/Dynamic-Routing_basic/OSPF/OSPF-Single-Area-Point-To-Point/Screenshots/Topology.png)
 
 ## Konsep Jaringan
 Dalam topologi ini, saya menerapkan:
