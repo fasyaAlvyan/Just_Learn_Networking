@@ -1,4 +1,4 @@
-# VLAN Router-on-Stick 3-Switch Lab (PNETLab)
+# VLAN Router-on-a-Stick 3-Switch Lab (PNETLab)
 
 ## 📌 Deskripsi Proyek
 Proyek ini merupakan simulasi jaringan **Router-on-Stick** menggunakan MikroTik dan Ruijie Switch. Tujuannya adalah memecah satu broadcast domain menjadi beberapa VLAN (10, 20, dan 99 Management) untuk meningkatkan keamanan, efisiensi, dan segmentasi jaringan.
